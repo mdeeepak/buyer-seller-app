@@ -1,0 +1,31 @@
+<!--
+  Generated template for the MessageShowmessage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <ion-list no-lines>
+    <ion-item>
+      <ion-card>
+      <ion-card-content>
+        <label text-wrap> {{message}} </label>
+      </ion-card-content>
+    </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-textarea placeholder="Send a message" ng-model="message"></ion-textarea>
+  <button ion-button primary item-right (click)="sendMessage(message)"> Send</button>
+
+</ion-footer>

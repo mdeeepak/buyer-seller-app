@@ -1,0 +1,48 @@
+<!--
+  Generated template for the Postadd page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>PostAdd</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div url>
+    <button ion-button full color="primary">
+      Good Morning &nbsp; <i>Ankit Kumar</i>
+</button>
+    <ion-list no-lines>
+    <ion-item>
+      <ion-label floating>Title:</ion-label>
+      <ion-input type="text" [(ngModel)]="addTitle"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Description:</ion-label>
+      <ion-textarea [(ngModel)]="addDescription"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Price:</ion-label>
+      <ion-input type="text" [(ngModel)]="addPrice"></ion-input>
+    </ion-item>
+    <ion-item>
+  <img src="{{pathForImage(lastImage)}}" style="width: 100%" *ngIf="lastImage !== null">
+    </ion-item>
+    <ion-item>
+      <button ion-button  (click)="presentActionSheet()" clear style="height:80px;width:80px;">
+        <img src="../../assets/images/camera.png"  />
+      </button>
+    </ion-item>
+    </ion-list>
+    <button ion-button (click)="uploadData()" large align-center="true" full>Submit</button>
+  </div>
+</ion-content>
+
+
